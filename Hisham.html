@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanavs" width="400" height="400" style="border:1px solid #FDD692; "></canvas>
+    <!-- <canvas id="myCanvas" width="400" height="400" style="border:1px solid #000;"></canvas> -->
+    <script>
+         const canvas = document.getElementById("myCanavs");
+  const ctx = canvas.getContext("2d");
+
+  // رسم دائرة
+  ctx.beginPath();
+  ctx.arc(200, 200, 100, 0, Math.PI * 2);
+  ctx.closePath();
+  ctx.fillStyle =  "rgba(0, 128, 0, 0.4)";// أزرق شفاف
+  ctx.fill();
+   const gradient = ctx.createLinearGradient(120, 180, 280, 220);
+  gradient.addColorStop(0, "#FFF3DC");
+  gradient.addColorStop(1, "#FDD692");
+    ctx.font = "bold 30px Arial";
+  ctx.fillStyle = gradient;
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText("Hesham", 200, 200);
+  
+    </script>
+</body>
+</html>
